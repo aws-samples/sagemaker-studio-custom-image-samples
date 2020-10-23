@@ -1,0 +1,16 @@
+{
+    "AppImageConfigName": "custom-echo-kernel-image-config",
+    "KernelGatewayImageConfig": {
+        "KernelSpecs": [
+            {
+                "Name": "echo",
+                "DisplayName": "Echo"
+            }
+        ],
+        "FileSystemConfig": {
+            "MountPath": "/home/sagemaker-user",
+            "DefaultUid": 1000,
+            "DefaultGid": 100
+        }
+    }
+}

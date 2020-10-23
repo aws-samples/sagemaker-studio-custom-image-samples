@@ -1,0 +1,13 @@
+{
+    "DomainId": "<domain-id>",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "custom-echo-kernel",
+                    "AppImageConfigName": "custom-echo-kernel-image-config"
+                }
+            ]
+        }
+    }
+}
