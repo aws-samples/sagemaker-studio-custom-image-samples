@@ -77,7 +77,7 @@ Look at the logs in the Log Group `/aws/sagemaker/studio` and the Log Stream `$d
 
 ### Missing ECR permissions
 
-Ensure your SageMaker Studio execution role has permissions to pull the image from ECR.
+Ensure your SageMaker Studio execution role has permissions to pull the image from ECR. See the [ECR documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/security_iam_id-based-policy-examples.html) for IAM permissions required to pull an image.
 
 
 
