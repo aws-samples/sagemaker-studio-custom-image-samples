@@ -1,0 +1,13 @@
+{
+    "DomainId": "<domain-id>",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "custom-scala",
+                    "AppImageConfigName": "custom-scala-image-config"
+                }
+            ]
+        }
+    }
+}

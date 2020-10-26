@@ -1,0 +1,16 @@
+{
+    "AppImageConfigName": "custom-scala-image-config",
+    "KernelGatewayImageConfig": {
+        "KernelSpecs": [
+            {
+                "Name": "scala213",
+                "DisplayName": "Scala 2.13 (Custom Scala Image)"
+            }
+        ],
+        "FileSystemConfig": {
+            "MountPath": "/home/jovyan",
+            "DefaultUid": 1000,
+            "DefaultGid": 100
+        }
+    }
+}

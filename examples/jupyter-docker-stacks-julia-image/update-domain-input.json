@@ -1,0 +1,13 @@
+{
+    "DomainId": "<domain-id>",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "julia-datascience",
+                    "AppImageConfigName": "julia-datascience-image-config"
+                }
+            ]
+        }
+    }
+}

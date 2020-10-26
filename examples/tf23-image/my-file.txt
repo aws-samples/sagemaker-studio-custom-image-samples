@@ -1,0 +1,5 @@
+A file that you want to access in SageMaker Studio. This file will be available in `/root` on 
+SageMaker Studio and all other files from the user's directory on the EFS volume will be in `/root/data`.
+
+The working directory of the Notebook or a Terminal will be `/root/data` and you can access this file  by `../my-file.txt`
+

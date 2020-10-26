@@ -1,0 +1,13 @@
+{
+    "DomainId": "<domain-id>",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "custom-r",
+                    "AppImageConfigName": "custom-r-image-config"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "AppImageConfigName": "custom-tf23",
+    "KernelGatewayImageConfig": {
+        "KernelSpecs": [
+            {
+                "Name": "python3",
+                "DisplayName": "Python 3"
+            }
+        ],
+        "FileSystemConfig": {
+            "MountPath": "/root/data",
+            "DefaultUid": 0,
+            "DefaultGid": 0
+        }
+    }
+}
