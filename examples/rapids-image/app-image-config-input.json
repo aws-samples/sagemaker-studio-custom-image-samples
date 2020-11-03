@@ -1,0 +1,16 @@
+{
+    "AppImageConfigName": "custom-rapids-image-config",
+    "KernelGatewayImageConfig": {
+        "KernelSpecs": [
+            {
+                "Name": "rapids",
+                "DisplayName": "RAPIDS"
+            }
+        ],
+        "FileSystemConfig": {
+            "MountPath": "/home/",
+            "DefaultUid": 1000,
+            "DefaultGid": 100
+        }
+    }
+}
