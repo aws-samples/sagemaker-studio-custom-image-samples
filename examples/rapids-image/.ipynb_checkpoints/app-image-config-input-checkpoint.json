@@ -3,14 +3,14 @@
     "KernelGatewayImageConfig": {
         "KernelSpecs": [
             {
-                "Name": "rapids",
-                "DisplayName": "RAPIDS"
+                "Name": "python3",
+                "DisplayName": "Python 3"
             }
         ],
         "FileSystemConfig": {
-            "MountPath": "/home/",
-            "DefaultUid": 1000,
-            "DefaultGid": 100
+            "MountPath": "/home/$USER",
+            "DefaultUid": 0,
+            "DefaultGid": 0
         }
     }
 }

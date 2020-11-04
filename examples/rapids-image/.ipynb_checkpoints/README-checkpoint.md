@@ -1,4 +1,4 @@
-## Scala Image
+## RAPIDS.ai Image
 
 ### Overview
 
