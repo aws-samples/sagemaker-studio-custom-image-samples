@@ -16,7 +16,7 @@ ACCOUNT_ID=<account-id>
 
 
 # Build the image
-IMAGE_NAME=custom-scala
+IMAGE_NAME=custom-rapids
 aws --region ${REGION} ecr get-login-password | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom
 docker build . -t ${IMAGE_NAME} -t ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom:${IMAGE_NAME}
 ```
