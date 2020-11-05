@@ -3,8 +3,8 @@
     "KernelGatewayImageConfig": {
         "KernelSpecs": [
             {
-                "Name": "python3",
-                "DisplayName": "Python 3"
+                "Name": "python",
+                "DisplayName": "Python"
             }
         ],
         "FileSystemConfig": {
