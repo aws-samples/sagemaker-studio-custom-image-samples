@@ -8,7 +8,7 @@
             }
         ],
         "FileSystemConfig": {
-            "MountPath": "/home/$USER",
+            "MountPath": "/root",
             "DefaultUid": 0,
             "DefaultGid": 0
         }
