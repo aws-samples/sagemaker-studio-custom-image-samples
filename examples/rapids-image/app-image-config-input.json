@@ -3,8 +3,8 @@
     "KernelGatewayImageConfig": {
         "KernelSpecs": [
             {
-                "Name": "python",
-                "DisplayName": "Python"
+                "Name": "conda-env-rapids-py",
+                "DisplayName": "RAPIDS"
             }
         ],
         "FileSystemConfig": {
