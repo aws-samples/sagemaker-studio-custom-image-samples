@@ -74,3 +74,8 @@ If you have an existing Domain, you can also use the `update-domain`
 ```
 aws --region ${REGION} sagemaker update-domain --cli-input-json file://update-domain-input.json
 ```
+
+### Note
+
+- Please use the included `Python [conda env:rapids]' kernel within Studio
+- This has been tested with p3.8x instance on Studio
