@@ -3,8 +3,8 @@
     "KernelGatewayImageConfig": {
         "KernelSpecs": [
             {
-                "Name": "julia-1.4",
-                "DisplayName": "Julia 1.4"
+                "Name": "julia-1.5",
+                "DisplayName": "Julia 1.5"
             }
         ],
         "FileSystemConfig": {
