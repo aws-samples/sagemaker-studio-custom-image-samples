@@ -1,0 +1,16 @@
+{
+    "AppImageConfigName": "custom-beakerx-image-config",
+    "KernelGatewayImageConfig": {
+        "KernelSpecs": [
+            {
+                "Name": "java",
+                "DisplayName": "java"
+            }
+        ],
+        "FileSystemConfig": {
+            "MountPath": "/home/sagemaker-user",
+            "DefaultUid": 1000,
+            "DefaultGid": 100
+        }
+    }
+}
