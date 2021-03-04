@@ -81,7 +81,7 @@ Ensure your SageMaker Studio execution role has permissions to pull the image fr
 
 ### Files With Unsupported UIDs/GIDs
 
-SageMaker only supports UIDs/GIDs greater than 65535. You shouuld ensure that your container does not have any layers containing a file with a GID/UID higher than 65535.
+SageMaker only supports UIDs/GIDs less than 65535. You should ensure that your container does not have any layers containing a file with a GID/UID higher than 65535.
 
 You can check if you have any files in your Docker image that exceed 65535 by adding the following RUN commands at the end of your Dockerfile
 ```
