@@ -79,5 +79,36 @@ Look at the logs in the Log Group `/aws/sagemaker/studio` and the Log Stream `$d
 
 Ensure your SageMaker Studio execution role has permissions to pull the image from ECR. See the [ECR documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/security_iam_id-based-policy-examples.html) for IAM permissions required to pull an image.
 
+### Files With Unsupported UIDs/GIDs
 
+SageMaker only supports UIDs/GIDs greater than 65535. You shouuld ensure that your container does not have any layers containing a file with a GID/UID higher than 65535.
 
+You can check if you have any files in your Docker image that exceed 65535 by adding the following RUN commands at the end of your Dockerfile
+```
+RUN echo $(sudo find / -gid +65535 -ls 2>/dev/null)
+RUN echo $(sudo find / -uid +65535 -ls 2>/dev/null)
+```
+or the following commands in a terminal inside the container
+```
+$ echo $(sudo find / -gid +65535 -ls 2>/dev/null)
+$ echo $(sudo find / -uid +65535 -ls 2>/dev/null)
+```
+If you find any output from the above commands, you have 2 options:
+
+1. Pinpoint the step in your Dockerfile that creates the files shown in the output append the following to the RUN command in your Dockerfile as shown:
+  ```
+  RUN YOUR_COMMANDS_HERE && echo $(sudo find / -uid +65535 -ls -delete | grep ".") && echo $(sudo find / -gid +65535 -ls -delete | grep ".")
+  ```
+  Pinpointing the step that creates these files can be a little tricky, but adding the following lines througout your dockerfile as shown should be able to help narrow the search.
+  
+  ```
+  RUN INSTALL_SOME_PACKAGE_HERE
+  RUN echo $(sudo find / -gid +65535 -ls 2>/dev/null)
+  RUN echo $(sudo find / -uid +65535 -ls 2>/dev/null)
+  ```
+  
+2. Use a tool like [docker-squash](https://github.com/jwilder/docker-squash) to remove any unecessary intermediate layers from your Docker build. Using this option, you can simply run the following at the end of your Dockerfile.
+
+  ```
+  RUN echo $(sudo find / -gid +65535 -ls -delete | grep ".") && echo $(sudo find / -uuid +65535 -ls -delete | grep ".")
+  ```
