@@ -109,7 +109,7 @@ If you find any output from the above commands, you have 2 options:
 
 ### UID/GID mismatch between AppImageConfig and Dockerfile
 
-SageMaker will throw an error if the UID/GID associated with the default user in the container image does not match what is provided in the `AppImageConfig` via the CLI or the Admin console. This error message will be similar to *SageMaker is unable to launch the app using the image [...]. Ensure that the UID/GID provided in the AppImageConfig matches the default UID/GID defined in the image.*
+SageMaker will throw an error if the UID/GID associated with the default user in the container image does not match with what is provided in the `AppImageConfig` via the CLI or the Admin console. This error message will be similar to *SageMaker is unable to launch the app using the image [...]. Ensure that the UID/GID provided in the AppImageConfig matches the default UID/GID defined in the image.*
 
 
 To fix this mistmatch, run the container image locally.
