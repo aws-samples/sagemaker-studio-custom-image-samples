@@ -107,3 +107,25 @@ If you find any output from the above commands, you have 2 options:
   RUN echo $(sudo find / -gid +65535 -ls -delete | grep ".") && echo $(sudo find / -uuid +65535 -ls -delete | grep ".")
   ```
 
+### UID/GID mismatch between AppImageConfig and Dockerfile
+
+SageMaker will throw an error if the UID/GID associated with the default user in the container image does not match what is provided in the `AppImageConfig` via the CLI or the Admin console. This error message will be similar to *SageMaker is unable to launch the app using the image [...]. Ensure that the UID/GID provided in the AppImageConfig matches the default UID/GID defined in the image.*
+
+
+To fix this mistmatch, run the container image locally.
+```
+IMAGE_NAME=<your-image-name>
+docker run -it "$IMAGE_NAME" bash
+```
+
+Then, get the UID/GID of the default user in the image. Ensure these are the values that are provided in `AppImageConfig` 
+```
+# UID
+id -u
+# GID
+id -g
+```
+
+NOTE: As of 2021-11-03, SageMaker only supports 1000/100 or 0/0 as the possible UID/GID values. Ensure that your container image has one of these possible values. For an example, see [this sample image](https://github.com/aws-samples/sagemaker-studio-custom-image-samples/blob/main/examples/r-image/Dockerfile#L19-L33).
+
+
