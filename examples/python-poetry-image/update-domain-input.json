@@ -1,0 +1,13 @@
+{
+    "DomainId": "<domain-id>",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "custom-poetry-kernel",
+                    "AppImageConfigName": "custom-poetry-kernel-image-config"
+                }
+            ]
+        }
+    }
+}
