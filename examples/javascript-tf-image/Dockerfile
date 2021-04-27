@@ -165,7 +165,7 @@ RUN ${PIP} install --no-cache-dir \
 # able to resolve per the issue below - even if we `ENV NODE_PATH=/usr/lib/node_modules`... So instead,
 # we'll central/kernel-provided libs non-"globally" at the filesystem root:
 WORKDIR /
-RUN npm install -g \
+RUN npm install \
     aws-sdk@2 \
     # (For performance, use -node-gpu where you can, else -node, else tfjs)
     @tensorflow/tfjs@3.5 \
