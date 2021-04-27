@@ -1,0 +1,16 @@
+{
+  "AppImageConfigName": "custom-ts",
+  "KernelGatewayImageConfig": {
+      "KernelSpecs": [
+          {
+              "Name": "tslab",
+              "DisplayName": "TensorFlow.js (TypeScript)"
+          }
+      ],
+      "FileSystemConfig": {
+          "MountPath": "/home/sagemaker-user",
+          "DefaultUid": 1000,
+          "DefaultGid": 100
+      }
+  }
+}
