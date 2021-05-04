@@ -10,6 +10,7 @@ boto3 = "^1.17.51"
 ipykernel = "^5.5.3"
 numpy = "^1.20.2"
 pandas = "^1.2.4"
+sagemaker = "^2.39.0"
 scikit-learn = "^0.24.1"
 scipy = "^1.6.2"
 
