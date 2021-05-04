@@ -1,0 +1,16 @@
+		{
+            "AppImageConfigName": "custom-poetry-kernel-image-config",
+            "KernelGatewayImageConfig": {
+                "KernelSpecs": [
+                    {
+                        "Name": "python3",
+                        "DisplayName": "Python 3 (poetry)"
+                    }
+                ],
+                "FileSystemConfig": {
+                    "MountPath": "/home/sagemaker-user",
+                    "DefaultUid": 1000,
+                    "DefaultGid": 100
+                }
+            }
+        }

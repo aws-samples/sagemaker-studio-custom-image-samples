@@ -1,0 +1,19 @@
+{
+    "DomainName": "domain-with-poetry-kernel-image",
+    "VpcId": "<vpc-id>",
+    "SubnetIds": [
+        "<subnet-ids>"
+    ],
+    "DefaultUserSettings": {
+        "ExecutionRole": "<execution-role>",
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "custom-poetry-kernel",
+                    "AppImageConfigName": "custom-poetry-kernel-image-config"
+                }
+            ]
+        }
+    },
+    "AuthMode": "IAM"
+}
