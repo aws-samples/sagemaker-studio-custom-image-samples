@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "conda run -n $NB_ENV python -m ipykernel_launcher -f '{connection_file}'"
+  ],
+  "display_name": "Conda EFS env",
+  "language": "python"
+}

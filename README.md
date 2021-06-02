@@ -12,7 +12,9 @@ This repository contains examples of Docker images that are valid custom images 
 - [r-image](examples/r-image) - This example contains the `ir` kernel and a selection of R packages, along with the AWS Python SDK (boto3) and the SageMaker Python SDK which can be used from R using `reticulate`
 - [rapids-image](examples/rapids-image) - This example uses the offical rapids.ai image from Dockerhub. Use with a GPU instance on Studio
 - [scala-image](examples/scala-image) - This example adds a Scala kernel based on [Almond Scala Kernel](https://almond.sh/).
-- [tf2.3-image](examples/tf23-image) - This examples uses the official TensorFlow 2.3 image from DockerHub and demonstrates bundling custom files along with the image.
+- [tf2.3-image](examples/tf23-image) - This example uses the official TensorFlow 2.3 image from DockerHub and demonstrates bundling custom files along with the image.
+- [conda-efs-image](examples/conda-efs-image) - This example creates a custom image in Amazon SageMaker Studio which will load a `custom` conda environment from a users [Elastic File System](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-tasks-manage-storage.html) (EFS) home folder.
+
 #### One-time setup
 
 All examples have a one-time setup to create an ECR repository

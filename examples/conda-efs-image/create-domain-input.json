@@ -1,0 +1,19 @@
+{
+    "DomainName": "domain-with-conda-efs-image",
+    "VpcId": "<vpc-id>",
+    "SubnetIds": [
+        "<subnet-ids>"
+    ],
+    "DefaultUserSettings": {
+        "ExecutionRole": "<execution-role>",
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "custom-conda-efs",
+                    "AppImageConfigName": "custom-conda-efs-env-config"
+                }
+            ]
+        }
+    },
+    "AuthMode": "IAM"
+}
