@@ -8,7 +8,7 @@
             }
         ],
         "FileSystemConfig": {
-            "MountPath": "/home/jovyan",
+            "MountPath": "/home/jovyan/work",
             "DefaultUid": 1000,
             "DefaultGid": 100
         }
