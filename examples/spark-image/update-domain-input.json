@@ -1,0 +1,13 @@
+{
+    "DomainId": "<domain-id>",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "spark-kernel",
+                    "AppImageConfigName": "custom-spark-image-config"
+                }
+            ]
+        }
+    }
+}
