@@ -1,6 +1,6 @@
-## SageMaker Studio Custom Image Samples
+# SageMaker Studio Custom Image Samples
 
-### Overview
+## Overview
 
 This repository contains examples of Docker images that are valid custom images for KernelGateway Apps in SageMaker Studio. These custom images enable you to bring your own packages, files, and kernels for use with notebooks, terminals, and interactive consoles within SageMaker Studio.
 
@@ -13,11 +13,13 @@ This repository contains examples of Docker images that are valid custom images 
 - [rapids-image](examples/rapids-image) - This example uses the offical rapids.ai image from Dockerhub. Use with a GPU instance on Studio
 - [scala-image](examples/scala-image) - This example adds a Scala kernel based on [Almond Scala Kernel](https://almond.sh/).
 - [tf2.3-image](examples/tf23-image) - This examples uses the official TensorFlow 2.3 image from DockerHub and demonstrates bundling custom files along with the image.
+- [spark-image](examples/spark-image) - This example gives the spark image to do python spark code developement in SageMaker studio.
+
 #### One-time setup
 
 All examples have a one-time setup to create an ECR repository
 
-```
+```bash
 REGION=<aws-region>
 aws --region ${REGION} ecr create-repository \
     --repository-name smstudio-custom
