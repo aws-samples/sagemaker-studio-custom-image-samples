@@ -6,6 +6,7 @@ This repository contains examples of Docker images that are valid custom images 
 
 ### Examples
 
+- [conda-env-kernel-image](examples/conda-env-kernel-image) - This example creates a custom Conda environment in the Docker image and demonstrates using it as a custom kernel. 
 - [echo-kernel-image](examples/echo-kernel-image) - This example uses the echo_kernel from Jupyter as a "Hello World" introduction into writing custom KernelGateway images.
 - [jupyter-docker-stacks-julia-image](examples/jupyter-docker-stacks-julia-image) - This example leverages the Data Science image from Jupyter Docker Stacks to add a Julia kernel.
 - [python-poetry-image](examples/python-poetry-image) - This example uses Poetry to manage the package dependencies in Python.
