@@ -1,0 +1,19 @@
+{
+    "DomainName": "domain-with-custom-conda-env",
+    "VpcId": "<vpc-id>",
+    "SubnetIds": [
+        "<subnet-ids>"
+    ],
+    "DefaultUserSettings": {
+        "ExecutionRole": "<role-arn>",
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "conda-env-kernel",
+                    "AppImageConfigName": "conda-env-kernel-config"
+                }
+            ]
+        }
+    },
+    "AuthMode": "IAM"
+}

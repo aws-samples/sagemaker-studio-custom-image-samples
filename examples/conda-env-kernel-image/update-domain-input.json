@@ -1,0 +1,13 @@
+{
+    "DomainId": "<domain-id>",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "conda-env-kernel",
+                    "AppImageConfigName": "conda-env-kernel-config"
+                }
+            ]
+        }
+    }
+}
