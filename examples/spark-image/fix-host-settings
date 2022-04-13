@@ -1,0 +1,4 @@
+#!/bin/sh
+sudo -i chmod 777 /etc/hosts > /dev/null 2>&1
+if !(grep -qi $HOSTNAME /etc/hosts); then echo "127.0.0.1 ${HOSTNAME}" >> /etc/hosts; fi
+cat /etc/hosts
