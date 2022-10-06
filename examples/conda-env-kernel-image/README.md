@@ -9,7 +9,7 @@ The Conda environment must have the appropriate kernel package installed, for e.
 
 ### Building the image
 
-Build the Docker image and push to Amazon ECR. 
+Build the Docker image. 
 ```
 # Modify these as required. The Docker registry endpoint can be tuned based on your current region from https://docs.aws.amazon.com/general/latest/gr/ecr.html#ecr-docker-endpoints
 REGION=<aws-region>
@@ -23,6 +23,32 @@ aws --region ${REGION} ecr create-repository --repository-name smstudio-custom
 # Build and push the image
 aws --region ${REGION} ecr get-login-password | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom
 docker build . -t ${IMAGE_NAME} -t ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom:${IMAGE_NAME}
+docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom:${IMAGE_NAME}
+```
+
+### Local testing
+
+Run the image locally to verify that the kernels in the image are visible to a Kernel Gateway.
+```
+docker run -it "$IMAGE_NAME" bash
+```
+
+Run the container with a KernelGateway to validate that the kernels are visible from the REST endpoint exposed to the host.
+
+```
+docker run -it -p 8888:8888 "$IMAGE_NAME" bash -c 'pip install jupyter_kernel_gateway  && jupyter-kernelgateway --ip 0.0.0.0 --debug --port 8888'
+```
+
+Verify the Kernel Gateway is started successfully (e.g., *[KernelGatewayApp] Jupyter Kernel Gateway at http://0.0.0.0:8888* in the Docker logs) and validate that you can list the kernelspecs in the the running container
+
+```
+curl http://0.0.0.0:8888/api/kernelspecs
+```
+
+
+### Pushing the image
+Push the Docker image to Amazon ECR
+```
 docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom:${IMAGE_NAME}
 ```
 
