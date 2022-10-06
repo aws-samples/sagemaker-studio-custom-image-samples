@@ -3,12 +3,12 @@
     "KernelGatewayImageConfig": {
         "KernelSpecs": [
             {
-                "Name": "conda-env-myenv-py",
+                "Name": "python3",
                 "DisplayName": "Python [conda env: myenv]"
             }
         ],
         "FileSystemConfig": {
-            "MountPath": "/root",
+            "MountPath": "/home/sagemaker-user",
             "DefaultUid": 0,
             "DefaultGid": 0
         }
