@@ -82,7 +82,7 @@ docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom:${IMAG
 ```
 
 
-Create new App Image Version.
+Create new App Image Version
 ```
 aws --region ${REGION} sagemaker create-image-version \
     --image-name ${IMAGE_NAME} \
