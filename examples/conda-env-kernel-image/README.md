@@ -86,7 +86,7 @@ Create a Domain, providing the SageMaker Image and AppImageConfig in the Domain 
 aws --region ${REGION} sagemaker create-domain --cli-input-json file://create-domain-input.json
 ```
 
-If you have an existing Domain, you can also use the `update-domain`
+If you have an existing Domain, you can also use the `update-domain`. Replace the placeholder for Domain ID in `update-domain-input.json`
 
 ```bash
 aws --region ${REGION} sagemaker update-domain --cli-input-json file://update-domain-input.json
