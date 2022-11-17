@@ -8,7 +8,7 @@
             }
         ],
         "FileSystemConfig": {
-            "MountPath": "/home/sagemaker-user",
+            "MountPath": "/root",
             "DefaultUid": 0,
             "DefaultGid": 0
         }
