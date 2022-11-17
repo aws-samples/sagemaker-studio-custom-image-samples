@@ -3,7 +3,7 @@
     "KernelGatewayImageConfig": {
         "KernelSpecs": [
             {
-                "Name": "conda-env-myenv-py",
+                "Name": "python3",
                 "DisplayName": "Python [conda env: myenv]"
             }
         ],
