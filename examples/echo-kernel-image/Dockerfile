@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM public.ecr.aws/docker/library/python:3.6
 
 ARG NB_USER="sagemaker-user"
 ARG NB_UID="1000"
