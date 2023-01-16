@@ -1,0 +1,13 @@
+{
+    "DomainId": "<domain-id>",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "pip-venv-kernel",
+                    "AppImageConfigName": "pip-venv-kernel-config"
+                }
+            ]
+        }
+    }
+}
