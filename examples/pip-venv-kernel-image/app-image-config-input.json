@@ -1,0 +1,16 @@
+{
+    "AppImageConfigName": "pip-venv-kernel-config",
+    "KernelGatewayImageConfig": {
+        "KernelSpecs": [
+            {
+                "Name": "python3",
+                "DisplayName": "Python [pip venv: myenv]"
+            }
+        ],
+        "FileSystemConfig": {
+            "MountPath": "/root",
+            "DefaultUid": 0,
+            "DefaultGid": 0
+        }
+    }
+}
