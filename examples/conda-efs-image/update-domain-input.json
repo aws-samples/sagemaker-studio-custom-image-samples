@@ -1,0 +1,12 @@
+{
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "custom-conda-efs",
+                    "AppImageConfigName": "custom-conda-efs-env-config"
+                }
+            ]
+        }
+    }
+}
