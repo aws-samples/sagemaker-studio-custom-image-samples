@@ -8,6 +8,7 @@ This repository contains examples of Docker images that are valid custom images 
 
 - [conda-env-kernel-image](examples/conda-env-kernel-image) - This example creates a custom Conda environment in the Docker image and demonstrates using it as a custom kernel. 
 - [echo-kernel-image](examples/echo-kernel-image) - This example uses the echo_kernel from Jupyter as a "Hello World" introduction into writing custom KernelGateway images.
+- [beakerx](examples/beakerx-image) - This example uses the `BeakerX` kernel see [BeakerX](http://beakerx.com/) which allows you to use  Java, Groovy, Scala,   Kotlin, Clojure languages.
 - [jupyter-docker-stacks-julia-image](examples/jupyter-docker-stacks-julia-image) - This example leverages the Data Science image from Jupyter Docker Stacks to add a Julia kernel.
 - [python-poetry-image](examples/python-poetry-image) - This example uses Poetry to manage the package dependencies in Python.
 - [r-image](examples/r-image) - This example contains the `ir` kernel and a selection of R packages, along with the AWS Python SDK (boto3) and the SageMaker Python SDK which can be used from R using `reticulate`

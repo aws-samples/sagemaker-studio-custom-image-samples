@@ -1,0 +1,13 @@
+{
+    "DomainId": "<domain-id>",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "custom-beakerx",
+                    "AppImageConfigName": "custom-beakerx-image-config"
+                }
+            ]
+        }
+    }
+}
